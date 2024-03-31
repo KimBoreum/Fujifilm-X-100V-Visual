@@ -299,17 +299,17 @@ header {
 
 .floating:nth-child(4) {
   bottom: 200px;
-  right: 602px;
+  left: 855px;
 }
 
 .floating:nth-child(5) {
   top: -125px;
-  right: 30px;
+  left: 1150px;
 }
 
 .floating:nth-child(6) {
   bottom: -120px;
-  right: 136px;
+  left: 1350px;
 }
 
 .floating:nth-child(4):hover {
