@@ -36,9 +36,9 @@ document.addEventListener('DOMContentLoaded', function() {
 // 500px 이상일 경우 스크롤 버튼 출력 및 클릭 이벤트
 window.onscroll = function() {
   if (window.scrollY > 500) { 
-    document.getElementById("scrolltop").style.display = "block"; // # 제거
+    document.getElementById("scrolltop").style.display = "block"; 
   } else {
-    document.getElementById("scrolltop").style.display = "none"; // # 제거
+    document.getElementById("scrolltop").style.display = "none"; 
   }
 };
 
