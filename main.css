@@ -1,0 +1,431 @@
+@font-face {
+  font-family: 'SUIT-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2')
+    format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'SUIT-Regular', sans-serif;
+  background-color: #131313;
+  line-height: 150%;
+  color: rgba(242, 242, 242, 1);
+}
+
+a {
+  text-decoration: none;
+  font-size: 20px;
+  color: rgba(242, 242, 242, 0.5);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(19, 19, 19, 0.5);
+  backdrop-filter: blur(4px);
+  border-bottom: 0.5px solid rgba(242, 242, 242, 0.5);
+  box-sizing: border-box;
+  padding: 16px 96px;
+  position: fixed;
+  top: 0;
+  width: 100%; 
+  z-index: 10;
+}
+
+.logo img {
+  width: 192px;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu a {
+  padding: 20px 0;
+  gap: 101px;
+  margin-right: 101px;
+}
+
+.menu a:last-child {
+  margin-right: 0; 
+}
+
+.menu a:nth-child(3) {
+  font-weight: 900;
+  color: rgba(242, 242, 242, 1);
+}
+
+.menu-trigger,
+.menu-trigger span {
+  display: inline-block;
+  transition: all .4s;
+  box-sizing: border-box;
+}
+
+.menu-trigger {
+  display: none;
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+
+.menu-trigger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: rgba(242, 242, 242, 1);
+  border-radius: 4px;
+}
+
+.menu-trigger span:nth-of-type(1) {
+  top: 6px;
+}
+
+.menu-trigger span:nth-of-type(2) {
+  top: 14px;
+}
+
+.menu-trigger span:nth-of-type(3) {
+  bottom: 6px;
+}
+
+.menu-trigger.active-3 {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.menu-trigger.active-3 span:nth-of-type(1) {
+  -webkit-transform: translateY(8px) rotate(-45deg);
+  transform: translateY(8px) rotate(-45deg);
+}
+
+.menu-trigger.active-3 span:nth-of-type(2) {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.menu-trigger.active-3 span:nth-of-type(3) {
+  opacity: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  header {
+    padding: 16px 16px;
+  }
+  .menu-trigger {
+      display: block;
+  }
+
+  .menu {
+    display: none;
+  }
+}
+
+.banner {
+  min-width: 1350px;
+  height: 1080px;
+  position: relative;
+  overflow: hidden; 
+}
+
+.boxes-right, .boxes-left {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-15deg);
+  display: flex;
+  flex-direction: column;
+}
+
+.boxes-right {
+  right: 50%; 
+  transform: translate(50%, -50%) rotate(-15deg);
+}
+
+.boxes-left {
+  left: 50%; 
+  transform: translate(-50%, -50%) rotate(15deg);
+}
+
+.box {
+  transform: translateX(100%);
+  animation: slideIn 1s ease-out forwards;
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateX(0); 
+  }
+}
+
+.box.film01 { animation-delay: 1s; }
+.box.film02 { animation-delay: 1.5s; }
+.box.film03 { animation-delay: 2s; }
+
+.main-txt {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.main-txt img{
+  width: 1536px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -110%);
+}
+
+.main-txt p{
+  position: absolute;
+  left: 188px; 
+  bottom: 110px;
+  font-size: 20px;
+}
+
+.dim {
+  background-color: #131313;
+  opacity: 0;
+  animation: fadeInDim 5s forwards; /* .dim을 위한 애니메이션 */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.banner-camera {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -45%);
+  width: 1072px;
+  z-index: 3;
+  opacity: 0; 
+  animation: fadeInCamera 3s ease-in-out 3s forwards; 
+}
+
+@keyframes fadeInDim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.5; 
+  }
+}
+
+@keyframes fadeInCamera {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.section1 { 
+  min-width: 1350px;
+  height: 1080px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cameralens {
+  width: 864px
+}
+
+.section1 p {
+  position: absolute;
+  top: 180px;
+  left: 192px;
+}
+
+.polaroid {
+  position: absolute;
+  width: 1052px;
+  right: 15px;
+  padding: 100px 0;
+}
+
+.section2 { 
+  min-width: 1350px;
+  height: 1080px;
+  background-image: url(./img/sectionBg.png) ;
+  position: relative;
+  overflow: hidden;
+}
+
+.floating {
+  position: absolute;
+  animation: float 1s ease-in-out infinite alternate;
+}
+
+.floating:hover {
+  transform: scale(1.1); 
+  transition: transform 0.3s ease; 
+}
+
+@keyframes float {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-20px);
+  }
+}
+
+.floating:nth-child(1) {
+  top: -100px;
+  left: 30px;
+}
+
+.floating:nth-child(2) {
+  bottom: -120px;
+  left: 167px;
+
+}
+
+.floating:nth-child(3) {
+  top: 30px;
+  left: 755px;
+}
+
+.floating:nth-child(4) {
+  bottom: 200px;
+  right: 602px;
+}
+
+.floating:nth-child(5) {
+  top: -125px;
+  right: 30px;
+}
+
+.floating:nth-child(6) {
+  bottom: -120px;
+  right: 136px;
+}
+
+.floating:nth-child(4):hover {
+  cursor: pointer;
+}
+
+.section2-txt {
+  position: absolute;
+  color: #131313;
+  top: 40%;
+  left: 28%;
+  display: none;
+}
+
+h3 {
+  font-weight: 900;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.floating:nth-child(4):hover ~ .section2-txt {
+  display: block;
+}
+
+.section3 {
+  min-width: 1350px;
+  height: 1080px;
+  position: relative;
+  overflow: hidden;
+}
+
+.newspaper {
+  width: 1584px;
+  position: absolute;
+  left: -15%;
+  top: -15%;
+}
+
+.section3-txt {
+  position: absolute;
+  top: 30%;
+  right: 10%;
+}
+
+h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  font-weight: 900;
+}
+
+.section3-txt p {
+  font-size: 20px;
+}
+
+.section4 {
+  min-width: 1350px;
+  height: 900px;
+  position: relative;
+}
+
+.section4 video {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 566px;
+  height: auto;
+  background-size: cover;
+}
+
+.section4-txt {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.section4-txt h2 {
+  text-align: center;
+  color: #EBC088;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.section4-txt p {
+  text-align: center;
+  font-size: 16p;
+}
+
+footer {
+  min-width: 1350px;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F3E5D3;
+  padding: 45px 96px;
+}
+
+.footer-logo {
+  width: 192px;
+}
+
+footer p {
+  color: #131313
+}
+
+#scrolltop {
+  position: fixed;
+  cursor: pointer;
+  display: none; 
+  z-index: 99;
+  right: 32px;
+  bottom: 32px;
+}
+
+#scrolltop img {
+  width: 48px;
+}
