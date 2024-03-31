@@ -352,6 +352,8 @@ h3 {
   position: absolute;
   top: 30%;
   right: 10%;
+  padding: 20px;
+  background-color: #131313;
 }
 
 h2 {
