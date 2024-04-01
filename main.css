@@ -130,7 +130,7 @@ header {
 
 .banner {
   min-width: 1350px;
-  height: 1080px;
+  height: 100vh;
   position: relative;
   overflow: hidden; 
 }
@@ -176,7 +176,7 @@ header {
 }
 
 .main-txt img{
-  width: 1536px;
+  width: 1236px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -186,7 +186,7 @@ header {
 .main-txt p{
   position: absolute;
   left: 188px; 
-  bottom: 110px;
+  bottom: 54px;
   font-size: 20px;
 }
 
@@ -205,8 +205,8 @@ header {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -45%);
-  width: 1072px;
+  transform: translate(-50%, -38%);
+  width: 896px;
   z-index: 3;
   opacity: 0; 
   animation: fadeInCamera 3s ease-in-out 3s forwards; 
