@@ -1,10 +1,3 @@
-var burger = $('.menu-trigger');
-
-burger.on('click', function(e){
-  e.preventDefault();
-  $(this).toggleClass('active-3');
-});
-
 // 5초 후 .main-txt aos가 작동되도록
 document.addEventListener("DOMContentLoaded", function() {
   setTimeout(function() {
